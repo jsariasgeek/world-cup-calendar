@@ -32,11 +32,12 @@
       month: "short",
       day: "numeric",
     }).format(date);
-    var timeStr = new Intl.DateTimeFormat(undefined, {
+    var parts = new Intl.DateTimeFormat(undefined, {
       hour: "numeric",
       minute: "2-digit",
-      timeZoneName: "short",
-    }).format(date);
+      timeZoneName: "longGeneric",
+    }).formatToParts(date);
+    var timeStr = parts.map(function (p) { return p.value; }).join("").trim();
     return dateStr + " - " + timeStr;
   }
 
@@ -131,7 +132,7 @@
 
     var time = document.createElement("div");
     time.className = "match-time";
-    time.textContent = formatLocalDateTime(start) + " (" + Logic.formatET(match) + ")";
+    time.textContent = formatLocalDateTime(start);
     meta.appendChild(time);
 
     var teams = document.createElement("div");
