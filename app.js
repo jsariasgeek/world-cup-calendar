@@ -103,6 +103,22 @@
     }
   }
 
+  function buildTeamSpan(name) {
+    var span = document.createElement("span");
+    span.className = "team";
+    var flagCode = Logic.teamFlagCode(name);
+    if (flagCode) {
+      var flagImg = document.createElement("img");
+      flagImg.className = "flag";
+      flagImg.src = "flags/" + flagCode + ".svg";
+      flagImg.alt = "";
+      flagImg.loading = "lazy";
+      span.appendChild(flagImg);
+    }
+    span.appendChild(document.createTextNode(name));
+    return span;
+  }
+
   function renderMatchCard(tournament, match) {
     var start = Logic.matchStartUTC(tournament, match);
     var played = Logic.isPlayed(tournament, match);
@@ -120,7 +136,16 @@
 
     var teams = document.createElement("div");
     teams.className = "match-teams";
-    teams.textContent = Logic.matchTitle(match);
+    if (match.teamsConfirmed === false) {
+      teams.textContent = Logic.matchTitle(match);
+    } else {
+      teams.appendChild(buildTeamSpan(match.teamA));
+      var vs = document.createElement("span");
+      vs.className = "vs";
+      vs.textContent = "vs";
+      teams.appendChild(vs);
+      teams.appendChild(buildTeamSpan(match.teamB));
+    }
     meta.appendChild(teams);
 
     var venue = document.createElement("div");

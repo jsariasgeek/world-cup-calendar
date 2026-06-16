@@ -57,6 +57,69 @@
     return match.stadium + ", " + match.city;
   }
 
+  // ISO 3166-1 alpha-2 codes for every team name used in the data files, used to render
+  // flag emoji. England/Scotland aren't sovereign states so they use the special Unicode
+  // "tag sequence" flags (black flag + subdivision tag chars) instead of a 2-letter code.
+  var TEAM_COUNTRY_CODES = {
+    "Algeria": "DZ",
+    "Argentina": "AR",
+    "Australia": "AU",
+    "Austria": "AT",
+    "Belgium": "BE",
+    "Bosnia and Herzegovina": "BA",
+    "Brazil": "BR",
+    "Cabo Verde": "CV",
+    "Canada": "CA",
+    "Colombia": "CO",
+    "Croatia": "HR",
+    "Curaçao": "CW",
+    "Czechia": "CZ",
+    "DR Congo": "CD",
+    "Ecuador": "EC",
+    "Egypt": "EG",
+    "England": "GB-ENG",
+    "France": "FR",
+    "Germany": "DE",
+    "Ghana": "GH",
+    "Haiti": "HT",
+    "Iran": "IR",
+    "Iraq": "IQ",
+    "Ivory Coast": "CI",
+    "Japan": "JP",
+    "Jordan": "JO",
+    "Mexico": "MX",
+    "Morocco": "MA",
+    "Netherlands": "NL",
+    "New Zealand": "NZ",
+    "Norway": "NO",
+    "Panama": "PA",
+    "Paraguay": "PY",
+    "Portugal": "PT",
+    "Qatar": "QA",
+    "Saudi Arabia": "SA",
+    "Scotland": "GB-SCT",
+    "Senegal": "SN",
+    "South Africa": "ZA",
+    "South Korea": "KR",
+    "Spain": "ES",
+    "Sweden": "SE",
+    "Switzerland": "CH",
+    "Tunisia": "TN",
+    "Türkiye": "TR",
+    "United States": "US",
+    "Uruguay": "UY",
+    "Uzbekistan": "UZ",
+  };
+
+  // Returns the lowercase flag code used to build "flags/<code>.svg" (matching the
+  // flagcdn.com naming scheme the SVGs were sourced from), or "" for placeholder/
+  // unrecognized team names so callers can render unconfirmed knockout matchups
+  // without a flag instead of failing.
+  function teamFlagCode(teamName) {
+    var code = TEAM_COUNTRY_CODES[teamName];
+    return code ? code.toLowerCase() : "";
+  }
+
   function formatET(match) {
     var hour = parseInt(match.timeET.slice(0, 2), 10);
     var minute = match.timeET.slice(3, 5);
@@ -141,6 +204,7 @@
     matchTitle: matchTitle,
     matchDescription: matchDescription,
     matchLocation: matchLocation,
+    teamFlagCode: teamFlagCode,
     formatET: formatET,
     escapeICSText: escapeICSText,
     buildICS: buildICS,

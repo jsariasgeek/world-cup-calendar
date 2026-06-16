@@ -85,3 +85,22 @@ test("the opening match (match 1) kicks off 2026-06-11 at 19:00 UTC (3:00 PM ET)
   var start = Logic.matchStartUTC(tournament, opener);
   assertEqual(start.toISOString(), "2026-06-11T19:00:00.000Z");
 });
+
+test("every team with confirmed teams has a known flag file on disk (catches typos/renames)", function () {
+  var fs = require("fs");
+  var path = require("path");
+  tournament.matches
+    .filter(function (m) { return m.teamsConfirmed; })
+    .forEach(function (m) {
+      [m.teamA, m.teamB].forEach(function (name) {
+        var code = Logic.teamFlagCode(name);
+        if (!code) {
+          throw new Error("match " + m.number + " has no flag mapping for team: " + name);
+        }
+        var flagPath = path.join(__dirname, "..", "flags", code + ".svg");
+        if (!fs.existsSync(flagPath)) {
+          throw new Error("match " + m.number + " (" + name + ") maps to missing flag file: " + flagPath);
+        }
+      });
+    });
+});

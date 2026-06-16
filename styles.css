@@ -122,6 +122,33 @@ main {
 .match-teams {
   font-size: 1.05rem;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.match-teams .team {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.match-teams .flag {
+  width: 22px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15);
+  flex-shrink: 0;
+}
+
+.match-teams .vs {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .match-venue {

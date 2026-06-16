@@ -128,6 +128,18 @@ test("matchMatchesFilters: search matches either team, case-insensitively", func
   assertEqual(Logic.matchMatchesFilters(tournament, groupMatch, { search: "brazil" }), false);
 });
 
+test("teamFlagCode returns the lowercase ISO code used for the flag image filename", function () {
+  assertEqual(Logic.teamFlagCode("Mexico"), "mx");
+});
+
+test("teamFlagCode uses the special subdivision code for England", function () {
+  assertEqual(Logic.teamFlagCode("England"), "gb-eng");
+});
+
+test("teamFlagCode returns an empty string for an unrecognized/placeholder name", function () {
+  assertEqual(Logic.teamFlagCode("Winner of Match 74"), "");
+});
+
 test("matchMatchesFilters: status=upcoming hides played matches, status=played hides upcoming ones", function () {
   var afterFullTime = new Date("2026-06-11T22:00:00Z").getTime();
   assertEqual(Logic.matchMatchesFilters(tournament, groupMatch, { status: "upcoming" }, afterFullTime), false);
