@@ -1,0 +1,9 @@
+{
+  "name": "world-cup-calendar",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static site listing World Cup matches with Google Calendar / .ics export.",
+  "scripts": {
+    "test": "node test/run-all.js"
+  }
+}

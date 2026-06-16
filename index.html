@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Cup Calendar</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="page-header">
+  <h1>World Cup Match Calendar</h1>
+  <p class="subtitle">Browse every match and add it to Google Calendar or download it as an .ics file.</p>
+</header>
+
+<main>
+  <section class="controls">
+    <div class="control">
+      <label for="tournament-select">Tournament</label>
+      <select id="tournament-select"></select>
+    </div>
+    <div class="control">
+      <label for="search-input">Search team</label>
+      <input id="search-input" type="text" placeholder="e.g. Brazil">
+    </div>
+    <div class="control">
+      <label for="status-select">Status</label>
+      <select id="status-select">
+        <option value="upcoming">Upcoming only</option>
+        <option value="">All matches</option>
+        <option value="played">Played only</option>
+      </select>
+    </div>
+    <div class="control">
+      <label for="stage-select">Stage</label>
+      <select id="stage-select">
+        <option value="">All stages</option>
+      </select>
+    </div>
+    <div class="control">
+      <label for="group-select">Group</label>
+      <select id="group-select">
+        <option value="">All groups</option>
+      </select>
+    </div>
+  </section>
+
+  <p id="result-count" class="result-count"></p>
+
+  <section id="match-list" class="match-list"></section>
+</main>
+
+<footer class="page-footer">
+  <p>
+    Times are shown in your local timezone. Match schedule data was aggregated from public
+    sources around tournament kickoff; knockout-stage opponents are placeholders (e.g. "Winner
+    Group A") until earlier matches determine who actually advances. Double check against
+    <a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026" target="_blank" rel="noopener">fifa.com</a>
+    for any last-minute changes.
+  </p>
+</footer>
+
+<script src="logic.js"></script>
+<script src="data/world-cup-2026.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
