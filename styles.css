@@ -115,6 +115,13 @@ main {
 .match-time {
   font-size: 0.8rem;
   color: var(--muted);
+  margin-bottom: 2px;
+}
+
+.match-time-et {
+  font-size: 0.72rem;
+  color: var(--muted);
+  opacity: 0.6;
   margin-bottom: 4px;
 }
 

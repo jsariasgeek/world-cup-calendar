@@ -41,6 +41,16 @@
     return dateStr + " - " + timeStr;
   }
 
+  function formatETReference(start, match) {
+    var etDate = new Intl.DateTimeFormat("en-US", {
+      weekday: "short",
+      month: "short",
+      day: "numeric",
+      timeZone: "America/New_York",
+    }).format(start);
+    return etDate + " · " + Logic.formatET(match);
+  }
+
   function downloadICS(tournament, match) {
     var content = Logic.buildICS(tournament, match);
     var blob = new Blob([content], { type: "text/calendar;charset=utf-8" });
@@ -134,6 +144,11 @@
     time.className = "match-time";
     time.textContent = formatLocalDateTime(start);
     meta.appendChild(time);
+
+    var timeET = document.createElement("div");
+    timeET.className = "match-time-et";
+    timeET.textContent = formatETReference(start, match);
+    meta.appendChild(timeET);
 
     var teams = document.createElement("div");
     teams.className = "match-teams";
