@@ -120,6 +120,29 @@
     return code ? code.toLowerCase() : "";
   }
 
+  var CITY_TIMEZONES = {
+    "Arlington, TX":       "America/Chicago",
+    "Atlanta, GA":         "America/New_York",
+    "East Rutherford, NJ": "America/New_York",
+    "Foxborough, MA":      "America/New_York",
+    "Guadalupe, Mexico":   "America/Monterrey",
+    "Houston, TX":         "America/Chicago",
+    "Kansas City, MO":     "America/Chicago",
+    "Los Angeles, CA":     "America/Los_Angeles",
+    "Mexico City, Mexico": "America/Mexico_City",
+    "Miami Gardens, FL":   "America/New_York",
+    "Philadelphia, PA":    "America/New_York",
+    "Santa Clara, CA":     "America/Los_Angeles",
+    "Seattle, WA":         "America/Los_Angeles",
+    "Toronto, Canada":     "America/Toronto",
+    "Vancouver, Canada":   "America/Vancouver",
+    "Zapopan, Mexico":     "America/Mexico_City",
+  };
+
+  function venueTimezone(match) {
+    return CITY_TIMEZONES[match.city] || "America/New_York";
+  }
+
   function formatET(match) {
     var hour = parseInt(match.timeET.slice(0, 2), 10);
     var minute = match.timeET.slice(3, 5);
@@ -205,6 +228,7 @@
     matchDescription: matchDescription,
     matchLocation: matchLocation,
     teamFlagCode: teamFlagCode,
+    venueTimezone: venueTimezone,
     formatET: formatET,
     escapeICSText: escapeICSText,
     buildICS: buildICS,

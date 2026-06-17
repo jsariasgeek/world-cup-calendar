@@ -113,15 +113,16 @@ main {
 }
 
 .match-time {
-  font-size: 0.8rem;
-  color: var(--muted);
+  font-size: 0.9rem;
+  color: var(--text);
+  font-weight: 500;
   margin-bottom: 2px;
 }
 
-.match-time-et {
-  font-size: 0.72rem;
+.match-time-venue {
+  font-size: 0.75rem;
   color: var(--muted);
-  opacity: 0.6;
+  opacity: 0.7;
   margin-bottom: 4px;
 }
 

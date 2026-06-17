@@ -41,14 +41,22 @@
     return dateStr + " - " + timeStr;
   }
 
-  function formatETReference(start, match) {
-    var etDate = new Intl.DateTimeFormat("en-US", {
+  function formatVenueTime(start, match) {
+    var tz = Logic.venueTimezone(match);
+    var dateStr = new Intl.DateTimeFormat("en-US", {
       weekday: "short",
       month: "short",
       day: "numeric",
-      timeZone: "America/New_York",
+      timeZone: tz,
     }).format(start);
-    return etDate + " · " + Logic.formatET(match);
+    var timeParts = new Intl.DateTimeFormat("en-US", {
+      hour: "numeric",
+      minute: "2-digit",
+      timeZoneName: "short",
+      timeZone: tz,
+    }).formatToParts(start);
+    var timeStr = timeParts.map(function (p) { return p.value; }).join("").trim();
+    return dateStr + " · " + timeStr + " (" + match.city + ")";
   }
 
   function downloadICS(tournament, match) {
@@ -140,15 +148,15 @@
     var meta = document.createElement("div");
     meta.className = "match-meta";
 
-    var time = document.createElement("div");
-    time.className = "match-time";
-    time.textContent = formatLocalDateTime(start);
-    meta.appendChild(time);
+    var timeLocal = document.createElement("div");
+    timeLocal.className = "match-time";
+    timeLocal.textContent = formatLocalDateTime(start);
+    meta.appendChild(timeLocal);
 
-    var timeET = document.createElement("div");
-    timeET.className = "match-time-et";
-    timeET.textContent = formatETReference(start, match);
-    meta.appendChild(timeET);
+    var timeVenue = document.createElement("div");
+    timeVenue.className = "match-time-venue";
+    timeVenue.textContent = formatVenueTime(start, match);
+    meta.appendChild(timeVenue);
 
     var teams = document.createElement("div");
     teams.className = "match-teams";
