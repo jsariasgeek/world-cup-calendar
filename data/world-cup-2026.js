@@ -885,11 +885,11 @@ window.TOURNAMENTS["2026"] = {
     "group": null,
     "date": "2026-06-28",
     "timeET": "15:00",
-    "teamA": "Runner-up Group A",
-    "teamB": "Runner-up Group B",
+    "teamA": "South Africa",
+    "teamB": "Canada",
     "stadium": "Los Angeles Stadium (SoFi Stadium)",
     "city": "Los Angeles, CA",
-    "teamsConfirmed": false
+    "teamsConfirmed": true
   },
   {
     "number": 74,
@@ -897,8 +897,8 @@ window.TOURNAMENTS["2026"] = {
     "group": null,
     "date": "2026-06-29",
     "timeET": "16:30",
-    "teamA": "Winner Group E",
-    "teamB": "Best 3rd-Placed Team (Groups A/B/C/D/F)",
+    "teamA": "Germany",
+    "teamB": "Best 3rd-Placed Team (Groups C/D/F)",
     "stadium": "Boston Stadium (Gillette Stadium)",
     "city": "Foxborough, MA",
     "teamsConfirmed": false
@@ -909,11 +909,11 @@ window.TOURNAMENTS["2026"] = {
     "group": null,
     "date": "2026-06-29",
     "timeET": "21:00",
-    "teamA": "Winner Group F",
-    "teamB": "Runner-up Group C",
+    "teamA": "Netherlands",
+    "teamB": "Morocco",
     "stadium": "Monterrey Stadium (Estadio BBVA)",
     "city": "Guadalupe, Mexico",
-    "teamsConfirmed": false
+    "teamsConfirmed": true
   },
   {
     "number": 76,
@@ -921,11 +921,11 @@ window.TOURNAMENTS["2026"] = {
     "group": null,
     "date": "2026-06-29",
     "timeET": "13:00",
-    "teamA": "Winner Group C",
-    "teamB": "Runner-up Group F",
+    "teamA": "Brazil",
+    "teamB": "Japan",
     "stadium": "Houston Stadium (NRG Stadium)",
     "city": "Houston, TX",
-    "teamsConfirmed": false
+    "teamsConfirmed": true
   },
   {
     "number": 77,
@@ -934,7 +934,7 @@ window.TOURNAMENTS["2026"] = {
     "date": "2026-06-30",
     "timeET": "17:00",
     "teamA": "Winner Group I",
-    "teamB": "Best 3rd-Placed Team (Groups C/D/F/G/H)",
+    "teamB": "Best 3rd-Placed Team (Groups D/F/G)",
     "stadium": "New York New Jersey Stadium (MetLife Stadium)",
     "city": "East Rutherford, NJ",
     "teamsConfirmed": false
@@ -945,7 +945,7 @@ window.TOURNAMENTS["2026"] = {
     "group": null,
     "date": "2026-06-30",
     "timeET": "13:00",
-    "teamA": "Runner-up Group E",
+    "teamA": "Ivory Coast",
     "teamB": "Runner-up Group I",
     "stadium": "Dallas Stadium (AT&T Stadium)",
     "city": "Arlington, TX",
@@ -957,8 +957,8 @@ window.TOURNAMENTS["2026"] = {
     "group": null,
     "date": "2026-06-30",
     "timeET": "21:00",
-    "teamA": "Winner Group A",
-    "teamB": "Best 3rd-Placed Team (Groups C/E/F/H/I)",
+    "teamA": "Mexico",
+    "teamB": "Best 3rd-Placed Team (Groups C/E/H)",
     "stadium": "Mexico City Stadium (Estadio Azteca)",
     "city": "Mexico City, Mexico",
     "teamsConfirmed": false
@@ -970,7 +970,7 @@ window.TOURNAMENTS["2026"] = {
     "date": "2026-07-01",
     "timeET": "12:00",
     "teamA": "Winner Group L",
-    "teamB": "Best 3rd-Placed Team (Groups E/H/I/J/K)",
+    "teamB": "Best 3rd-Placed Team (Groups E/I/J/K)",
     "stadium": "Atlanta Stadium (Mercedes-Benz Stadium)",
     "city": "Atlanta, GA",
     "teamsConfirmed": false
@@ -981,11 +981,11 @@ window.TOURNAMENTS["2026"] = {
     "group": null,
     "date": "2026-07-01",
     "timeET": "20:00",
-    "teamA": "Winner Group D",
-    "teamB": "Best 3rd-Placed Team (Groups B/E/F/I/J)",
+    "teamA": "United States",
+    "teamB": "Bosnia and Herzegovina",
     "stadium": "San Francisco Bay Stadium (Levi's Stadium)",
     "city": "Santa Clara, CA",
-    "teamsConfirmed": false
+    "teamsConfirmed": true
   },
   {
     "number": 82,
@@ -994,7 +994,7 @@ window.TOURNAMENTS["2026"] = {
     "date": "2026-07-01",
     "timeET": "16:00",
     "teamA": "Winner Group G",
-    "teamB": "Best 3rd-Placed Team (Groups A/E/H/I/J)",
+    "teamB": "Best 3rd-Placed Team (Groups A/H/I/J)",
     "stadium": "Seattle Stadium (Lumen Field)",
     "city": "Seattle, WA",
     "teamsConfirmed": false
@@ -1029,7 +1029,7 @@ window.TOURNAMENTS["2026"] = {
     "group": null,
     "date": "2026-07-02",
     "timeET": "23:00",
-    "teamA": "Winner Group B",
+    "teamA": "Switzerland",
     "teamB": "Best 3rd-Placed Team (Groups E/F/G/I/J)",
     "stadium": "BC Place",
     "city": "Vancouver, Canada",
@@ -1041,7 +1041,7 @@ window.TOURNAMENTS["2026"] = {
     "group": null,
     "date": "2026-07-03",
     "timeET": "18:00",
-    "teamA": "Winner Group J",
+    "teamA": "Argentina",
     "teamB": "Runner-up Group H",
     "stadium": "Miami Stadium (Hard Rock Stadium)",
     "city": "Miami Gardens, FL",
@@ -1065,7 +1065,7 @@ window.TOURNAMENTS["2026"] = {
     "group": null,
     "date": "2026-07-03",
     "timeET": "14:00",
-    "teamA": "Runner-up Group D",
+    "teamA": "Australia",
     "teamB": "Runner-up Group G",
     "stadium": "Dallas Stadium (AT&T Stadium)",
     "city": "Arlington, TX",
