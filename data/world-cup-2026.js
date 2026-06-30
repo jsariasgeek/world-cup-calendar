@@ -1077,11 +1077,11 @@ window.TOURNAMENTS["2026"] = {
     "group": null,
     "date": "2026-07-04",
     "timeET": "17:00",
-    "teamA": "Winner of Match 74",
-    "teamB": "Winner of Match 77",
+    "teamA": "Paraguay",
+    "teamB": "France",
     "stadium": "Philadelphia Stadium (Lincoln Financial Field)",
     "city": "Philadelphia, PA",
-    "teamsConfirmed": false
+    "teamsConfirmed": true
   },
   {
     "number": 90,
@@ -1089,11 +1089,11 @@ window.TOURNAMENTS["2026"] = {
     "group": null,
     "date": "2026-07-04",
     "timeET": "13:00",
-    "teamA": "Winner of Match 73",
-    "teamB": "Winner of Match 75",
+    "teamA": "Canada",
+    "teamB": "Morocco",
     "stadium": "Houston Stadium (NRG Stadium)",
     "city": "Houston, TX",
-    "teamsConfirmed": false
+    "teamsConfirmed": true
   },
   {
     "number": 91,
@@ -1101,11 +1101,11 @@ window.TOURNAMENTS["2026"] = {
     "group": null,
     "date": "2026-07-05",
     "timeET": "16:00",
-    "teamA": "Winner of Match 76",
-    "teamB": "Winner of Match 78",
+    "teamA": "Brazil",
+    "teamB": "Norway",
     "stadium": "New York New Jersey Stadium (MetLife Stadium)",
     "city": "East Rutherford, NJ",
-    "teamsConfirmed": false
+    "teamsConfirmed": true
   },
   {
     "number": 92,
