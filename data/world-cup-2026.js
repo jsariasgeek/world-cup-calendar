@@ -1113,11 +1113,11 @@ window.TOURNAMENTS["2026"] = {
     "group": null,
     "date": "2026-07-05",
     "timeET": "20:00",
-    "teamA": "Winner of Match 79",
-    "teamB": "Winner of Match 80",
+    "teamA": "Mexico",
+    "teamB": "England",
     "stadium": "Mexico City Stadium (Estadio Azteca)",
     "city": "Mexico City, Mexico",
-    "teamsConfirmed": false
+    "teamsConfirmed": true
   },
   {
     "number": 93,
