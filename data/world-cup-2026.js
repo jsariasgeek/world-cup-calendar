@@ -1138,7 +1138,7 @@ window.TOURNAMENTS["2026"] = {
     "date": "2026-07-06",
     "timeET": "20:00",
     "teamA": "Winner of Match 81",
-    "teamB": "Winner of Match 82",
+    "teamB": "Belgium",
     "stadium": "Seattle Stadium (Lumen Field)",
     "city": "Seattle, WA",
     "teamsConfirmed": false
